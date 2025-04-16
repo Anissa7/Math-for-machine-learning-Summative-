@@ -67,7 +67,7 @@ summative/WebApp/index.html
 ---
 
 ## 📹 Video Demo
-- **YouTube Link:** [🔗 Watch the full 5-min demo](https://your-youtube-link.com)
+- **YouTube Link:** [🔗 Watch the full 3-min video https://youtu.be/gDaG4W46WpI)
 - Includes:
   - Swagger UI API test
   - Web app prediction
@@ -76,7 +76,7 @@ summative/WebApp/index.html
 ---
 
 ## 🌍 Live API (Optional)
-- [https://your-api-url.onrender.com/docs](https://your-api-url.onrender.com/docs) _(if deployed)_
+- [https://your-api-url.onrender.com/docs](https://your-api-url.onrender.com/docs)
 
 ---
 
