@@ -1,101 +1,91 @@
-# Machine Learning Regression Model, API, and Mobile App
+# 📊 Linear Regression Prediction System
 
-## Overview
-This project involves building a **linear regression model**, comparing its performance with **decision trees and random forests**, creating an **API using FastAPI** to serve predictions, and developing a **Flutter mobile application** to interact with the API.
+This project presents a complete machine learning pipeline that predicts a target variable using linear regression, deployed via a FastAPI backend and accessed through a custom-designed web interface.
 
 ---
-## 📂 Repository Structure
+
+## 🧠 Project Overview
+- **Mission-based Use Case:** Predicts a public health indicator using year and numerical feature inputs .
+- **Trained Models:**
+  - Linear Regression ✅
+  - Decision Tree ✅
+  - Random Forest ✅
+- **Evaluation:**
+  - Metrics: Mean Squared Error, R² Score
+  - Visualization: Loss curves for training & test sets
+- **Best Model:** Exported and used in deployment.
+
+---
+
+## 📁 Folder Structure
 ```
 linear_regression_model/
-│
 ├── summative/
 │   ├── linear_regression/
-│   │   ├── multivariate.ipynb  # Jupyter Notebook for Model Training
+│   │   ├── multivariate.ipynb          # Notebook with model training & evaluation
+│   │   ├── best_model.pkl              # Saved best-performing model
 │   ├── API/
-│   │   ├── prediction.py       # FastAPI code for serving predictions
-│   │   ├── requirements.txt    # Dependencies for running API
-│   ├── FlutterApp/
-│       ├── lib/
-│       ├── android/
-│       ├── ios/
-│       ├── pubspec.yaml        # Flutter dependencies
+│   │   ├── prediction.py               # FastAPI backend
+│   │   ├── requirements.txt            # All dependencies
+│   ├── WebApp/
+│   │   ├── index.html                  # Modern web interface for predictions
 ```
 
 ---
-## 📊 Task 1: Model Implementation
-- **Dataset**: Fetched from Kaggle/Google Datasets (dataset used is mentioned in the notebook).
-- **Models Implemented**:
-  - Linear Regression (Gradient Descent Optimized)
-  - Decision Tree
-  - Random Forest
-- **Comparison Metric**: Loss function analysis
-- **Final Model Selection**: Based on best loss metric.
-- **Loss Curve Visualization**: Plots for train/test data.
-- **Saved Model**: The best-performing model is saved for API usage.
 
-### Running the Notebook:
-```sh
-jupyter notebook multivariate.ipynb
+## 🚀 How to Run the Project
+
+### 1. 🔍 Model Notebook
+Open and run all cells in:
 ```
+summative/linear_regression/multivariate.ipynb
+```
+- Explore model training, evaluation, and comparisons
+- View performance metrics and exported model
 
----
-## 🌐 Task 2: API Implementation (FastAPI)
-- **Libraries Used**: `fastapi`, `pydantic`, `uvicorn`
-- **POST Endpoint**: `/predict`
-- **Input Validation**: Implemented using Pydantic for strict data type and range enforcement.
-- **Hosting**: Deployed on **Render**.
-
-### Running the API Locally:
-```sh
+### 2. ⚙️ FastAPI Backend
+```bash
+cd summative/API
 pip install -r requirements.txt
-uvicorn prediction:app --host 0.0.0.0 --port 8000
+uvicorn prediction:app --reload
 ```
-
-### API Testing:
-- Open Swagger UI at: **[Public API URL]/docs**
-- Example request:
-```json
-{
-    "feature1": 10.5,
-    "feature2": 3.7,
-    "feature3": 42
-}
+Then open:
 ```
-
----
-## 📱 Task 3: Flutter Mobile App
-- **Features**:
-  - User input via text fields for model input variables.
-  - A **Predict** button to send data to the API.
-  - Display of predicted value or error message.
-- **Dependencies**: Defined in `pubspec.yaml`.
-
-### Running the Flutter App:
-```sh
-flutter run
+http://127.0.0.1:8000/docs
 ```
+Use Swagger UI to test the `/predict` endpoint.
+
+### 3. 🌐 Web App Interface
+Open this file in your browser:
+```
+summative/WebApp/index.html
+```
+- Enter values for `YEAR_DISPLAY` and `Numeric`
+- Click **Predict**
+- View model results instantly
 
 ---
-## 🎥 Task 4: Video Demonstration
-✅ **Link to YouTube Demo**: [Insert YouTube Link Here]
-- Demonstrates:
-  - API testing in Swagger UI.
-  - Mobile app making predictions.
-  - Model performance explanation (without code walkthrough).
+
+## 📹 Video Demo
+- **YouTube Link:** [🔗 Watch the full 5-min demo](https://your-youtube-link.com)
+- Includes:
+  - Swagger UI API test
+  - Web app prediction
+  - Model explanation (Linear Regression, Random Forest, Decision Tree)
 
 ---
-## 🔗 Submission Checklist
-✅ **GitHub Repository**: [Insert Repo Link Here]  
-✅ **Public API Endpoint**: [Insert API Link Here]  
-✅ **YouTube Video Demo**: [Insert Video Link Here]  
-✅ **Instructions on running the project** provided.
+
+## 🌍 Live API (Optional)
+- [https://your-api-url.onrender.com/docs](https://your-api-url.onrender.com/docs) _(if deployed)_
 
 ---
-## ❗ Important Notes
-- **House price prediction is NOT used**, per assignment requirements.
-- The **best model** was selected based on loss metric comparison.
-- The **mobile app UI is structured properly** for usability.
+
+## ✅ Submission Notes
+- This project uses a real dataset aligned with a real-world mission
+- Avoided generic house price prediction use case as instructed
+- Met all technical and UI requirements for the summative assignment
 
 ---
-### 🚀 Enjoy exploring the project! 🎯
+
+Created with ❤️ by Anissa Ouedraogo
 
