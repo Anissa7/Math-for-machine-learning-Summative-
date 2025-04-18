@@ -3,6 +3,15 @@
 This project presents a complete machine learning pipeline that predicts a target variable using linear regression, deployed via a FastAPI backend and accessed through a custom-designed web interface.
 
 ---
+## 📊 Dataset Description
+
+The dataset contains public health metrics for Burkina Faso from year X to year Y, including features like YEAR_DISPLAY and [Numeric = e.g., sanitation index, health spend].
+
+➕ Data volume: ~X rows, ~Y columns  
+➕ Data variety: Includes numerical and temporal features.
+
+**Target variable predicted**: number of malaria cases
+
 
 ## 🧠 Project Overview
 - **Mission-based Use Case:** Predicts a public health indicator using year and numerical feature inputs .
