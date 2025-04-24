@@ -95,7 +95,8 @@ Watch the full demo on YouTube:
 
 ---
 
-## 🌍 **Live API (Optional)**  
+## 🌍 **Live API **  
+Link to the API :http://127.0.0.1:8000/docs
 If the API is deployed online, access it here:  
 [**Live API Documentation**](https://your-api-url.onrender.com/docs)
 
